@@ -1,28 +1,58 @@
 body {
-    background-color:#2a2a2a;
-    font-family: 'Ubuntu Mono', monospace;
-    margin: 0;
-    overflow-x: hidden;
-    text-align: center;
-    color: aliceblue;
+  background-color: #2a2a2a;
+  font-family: "Ubuntu Mono", monospace;
+  margin: 0;
+  overflow-x: hidden;
+  text-align:  center;
+  color: aliceblue;
+  font-size: 2em;
 }
 div {
-    --link-separator: '|';
-    --text-color: white;
-  }
-
-ul{
-    list-style: none;
+  --link-separator: "|";
+  --text-color: white;
+  --spacing: .25em
 }
+
+ul {
+  list-style: none;
+}
+
+ul:nth-child(1) {
+  color: #9ed670;
+}
+
+ul:nth-child(2) {
+  color: #6bd2db;
+}
+
+ul:nth-child(3) {
+  color: #ea899a;
+}
+
+ul:nth-child(4) {
+  color: #e8702a;
+}
+
+ul:nth-child(5) {
+  color: #ffbe4f;
+}
+
 li {
-    display:inline; 
+  display: inline;
 }
 
-#doormat-img{
-    margin-top: 50px;
-    margin-bottom: 20px;
+#doormat-img {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+
+
+a {
+  text-decoration: none;
+  
+}
 
 a + a:before {
     content: var(--link-separator);
@@ -30,3 +60,40 @@ a + a:before {
     margin-right: var(--spacing);
     color: var(--text-color);
   }
+
+a:link,
+a:visited {
+  color: white;
+}
+
+a:hover{
+    color: inherit;
+    font-weight: bold;
+}
+
+li{
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+li:first-child::after{
+    content: '';
+    border-right: 2px solid;
+    transition: border-right 50ms;
+    margin-right: var(--spacing);
+}
+
+ul:hover li:first-child:after {
+    /*font-weight: bolder;*/
+    border-right: 4px solid;
+    
+  }
+ul:hover li{
+    font-weight: bolder;
+}
+
+
+
+
