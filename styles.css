@@ -3,14 +3,14 @@ body {
   font-family: "Ubuntu Mono", monospace;
   margin: 0;
   overflow-x: hidden;
-  text-align:  center;
+  text-align: center;
   color: aliceblue;
   font-size: 2em;
 }
 div {
   --link-separator: "|";
   --text-color: white;
-  --spacing: .25em
+  --spacing: 0.25em;
 }
 
 ul {
@@ -42,58 +42,72 @@ li {
 }
 
 #doormat-img {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-
-
 a {
   text-decoration: none;
-  
 }
 
 a + a:before {
-    content: var(--link-separator);
-    margin-left: var(--spacing);
-    margin-right: var(--spacing);
-    color: var(--text-color);
-  }
+  content: var(--link-separator);
+  margin-left: var(--spacing);
+  margin-right: var(--spacing);
+  color: inherit;
+}
 
 a:link,
 a:visited {
   color: white;
 }
 
-a:hover{
-    color: inherit;
-    font-weight: bold;
+a:hover {
+  color: inherit;
+  font-weight: bold;
 }
 
-li{
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+li {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-li:first-child::after{
-    content: '';
-    border-right: 2px solid;
-    transition: border-right 50ms;
-    margin-right: var(--spacing);
+li:first-child::after {
+  content: "";
+  border-right: 2px solid;
+  transition: border-right 50ms;
+  margin-right: var(--spacing);
+  margin-left: var(--spacing);
 }
 
 ul:hover li:first-child:after {
-    /*font-weight: bolder;*/
-    border-right: 4px solid;
-    
-  }
-ul:hover li{
-    font-weight: bolder;
+  /*font-weight: bolder;*/
+  border-right: 4px solid;
+}
+ul:hover li {
+  font-weight: bolder;
 }
 
+#searchBar {
+  
+  width: 600px;
+  height: 30px;
+  border-radius: 20px;
+}
 
+#searchButton {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  background: white;
+  text-align: left;
+  color: black;
+  border-radius: 30px;
+  cursor: pointer;
+  align-content: center;
 
-
+}
