@@ -98,16 +98,34 @@ ul:hover li {
   border-radius: 20px;
 }
 
-#searchButton {
-  position: fixed;
-  width: 35px;
-  height: 35px;
-  border: 1px solid white;
-  background: white;
-  text-align: left;
-  color: black;
-  border-radius: 30px;
-  cursor: pointer;
-  align-content: center;
+
+/*Search Bar*/
+
+
+
+
+.searchTerm {
+  width: 100%;
+  border: 4px solid #D3d3d3;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
 
 }
+
+.searchTerm:focus{
+  border: 4px solid #6bd2db;
+  box-shadow: 0px 0px 20px #6bd2db;
+  
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
